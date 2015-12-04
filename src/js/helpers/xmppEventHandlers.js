@@ -247,7 +247,8 @@ module.exports = function (client, app) {
 
         var id = '';
         var type = 'image/png';
-        if (info.avatars.length > 0) {
+        var avatarsPresent = info.avatars && info.avatars.length;
+        if (avatarsPresent) {
             id = info.avatars[0].id;
             type = info.avatars[0].type || 'image/png';
         }
